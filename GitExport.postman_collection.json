@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "96300452-73b9-4276-a6b9-1fab16234340",
+		"name": "GitExport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8062077-91ec-4f41-9ae1-b5b4d110dafa",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
